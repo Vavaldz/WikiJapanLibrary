@@ -1,0 +1,163 @@
+/* style pour la page d'accueil */
+
+/* version ordinateur */
+@media (1025px <= width <= 9999px) {
+  /* partie élement à la une */
+  .article_recent,
+  .actualite_recente {
+    background-color: #e6dbce;
+    width: 800px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    border-radius: 15px;
+    padding-left: 20px;
+    margin-bottom: 5%;
+    margin-top: 3%;
+    opacity: 70%;
+  }
+
+  /* permet de modifier l'image des élements à la une */
+  #under,
+  #torii_img {
+    width: 220px;
+    border-radius: 15px;
+  }
+
+  /* modifie la couleur, la taille et enleve le surlignement du texte */
+  .block_actu,
+  .block_article {
+    text-decoration: none;
+    color: #af253c;
+    font-size: larger;
+  }
+
+  /* permet l'apparition d'un effet de flou quand le curseur survol la zone */
+  .actualite_recente:hover,
+  .article_recent:hover {
+    box-shadow: 10px 9px 5px #af253c;
+    opacity: 100%;
+  }
+  /* permet de modifier la position du du background */
+  main {
+    background-image: url("../ui/images/background2.jpg");
+    background-repeat: no-repeat;
+    background-size: 70%;
+    background-position-y: 0px;
+    background-position-x: right;
+    height: 700px;
+  }
+}
+
+/* version tablette */
+@media (769px <= width < 1025px) {
+  /* partie élement à la une */
+  .article_recent,
+  .actualite_recente {
+    background-color: #e6dbce;
+    width: 550px;
+    height: 220px;
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    border-radius: 15px;
+    padding-left: 20px;
+    margin-bottom: 5%;
+    margin-top: 3%;
+    opacity: 70%;
+  }
+
+  /* permet de modifier l'image des élements à la une */
+  #under,
+  #torii_img {
+    width: 220px;
+    border-radius: 15px;
+  }
+
+  /* modifie la couleur, la taille et enleve le surlignement du texte */
+  .block_actu,
+  .block_article {
+    text-decoration: none;
+    color: #af253c;
+    font-size: 1rem;
+  }
+
+  main {
+    background-image: url("../ui/images/background2.jpg");
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position-y: bottom;
+    background-position-x: right;
+    height: 600px;
+  }
+}
+
+/* modifie  la couleur du type de l'élement à la une */
+.type {
+  color: black;
+}
+
+/* permet l'apparition d'un effet de flou quand le curseur survol la zone */
+.actualite_recente:hover,
+.article_recent:hover {
+  box-shadow: 10px 9px 5px #af253c;
+  opacity: 100%;
+}
+
+/* Version mobile */
+@media (0px <= width < 769px) {
+    /* partie élement à la une */
+  .article_recent,
+  .actualite_recente {
+    background-color: #e6dbce;
+    width: 450px;
+    height: 170px;
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    border-radius: 15px;
+    padding-left: 20px;
+    margin-bottom: 5%;
+    margin-top: 3%;
+    opacity: 70%;
+  }
+
+  /* permet de modifier l'image des élements à la une */
+  #under,
+  #torii_img {
+    width: 150px;
+    border-radius: 15px;
+  }
+
+  /* modifie la couleur, la taille et enleve le surlignement du texte */
+  .block_actu,
+  .block_article {
+    text-decoration: none;
+    color: #af253c;
+    font-size: x-small;
+  }
+
+  main {
+    background-image: url("../ui/images/background2.jpg");
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position-y: bottom;
+    background-position-x: right;
+    height: 600px;
+  }
+
+
+/* modifie  la couleur du type de l'élement à la une */
+.type {
+  color: black;
+}
+
+/* permet l'apparition d'un effet de flou quand le curseur survol la zone */
+.actualite_recente:hover,
+.article_recent:hover {
+  box-shadow: 10px 9px 5px #af253c;
+  opacity: 100%;
+}
+
+}

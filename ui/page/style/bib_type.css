@@ -1,0 +1,231 @@
+/* Partie conteneur principal */
+main {
+    background-color: #f0e8df;
+    min-height: calc(100vh - 200px);
+    padding: 4rem 0;
+}
+
+/*Partie en-tête de page*/
+.entete-page {
+    max-width: 1300px;
+    margin: 0 auto 5rem;
+    padding: 3rem 2rem;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(184, 59, 94, 0.2);
+    border-left: 8px solid #b83b5e;
+    border-right: 8px solid #b83b5e;
+    text-align: center;
+}
+
+.entete-page h1 {
+    font-size: 3.5rem;
+    color: #b83b5e;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.texte-introduction {
+    font-size: 1.3rem;
+    color: #6d4c41;
+    line-height: 1.8;
+    max-width: 900px;
+    margin: 0 auto;
+    font-style: italic;
+}
+
+/*  Partie conteneur  catégories */
+.conteneur-categories {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.conteneur-categories > h2 {
+    font-size: 2.8rem;
+    color: #b83b5e;
+    text-align: center;
+    margin-bottom: 4rem;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 1.5rem;
+}
+
+.conteneur-categories > h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 4px;
+    background: linear-gradient(90deg, #b83b5e 0%, #e8d5c4 100%);
+}
+
+/* Partie grille de cartes*/
+.grille-cartes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.lien-carte {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+
+.carte-categorie {
+    background: #ffffff;
+    border-radius: 25px;
+    padding: 3rem;
+    box-shadow: 0 10px 30px rgba(109, 76, 65, 0.15);
+    border: 4px solid #e8d5c4;
+    transition: all 0.4s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(135deg, #fefaf6 0%, #fff5eb 100%);
+}
+
+.carte-categorie:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 45px rgba(184, 59, 94, 0.3);
+    border-color: #b83b5e;
+}
+
+.icone-categorie {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.carte-categorie h3 {
+    font-size: 2rem;
+    color: #b83b5e;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.carte-categorie h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, #b83b5e 0%, #e8d5c4 100%);
+}
+
+.carte-categorie p {
+    font-size: 1.1rem;
+    color: #4a3832;
+    line-height: 1.9;
+    text-align: justify;
+    flex-grow: 1;
+    margin-bottom: 1.5rem;
+}
+
+
+
+
+
+/* Partie responsive */
+@media (max-width: 1024px) {
+    .grille-cartes {
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 2.5rem;
+    }
+    
+    .entete-page h1 {
+        font-size: 2.8rem;
+    }
+    
+    .conteneur-categories > h2 {
+        font-size: 2.3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    main {
+        padding: 2rem 0;
+    }
+    
+    .entete-page {
+        margin-bottom: 3rem;
+        padding: 2rem 1.5rem;
+    }
+    
+    .entete-page h1 {
+        font-size: 2rem;
+    }
+    
+    .texte-introduction {
+        font-size: 1.1rem;
+    }
+    
+    .conteneur-categories {
+        padding: 0 1rem;
+    }
+    
+    .conteneur-categories > h2 {
+        font-size: 2rem;
+        margin-bottom: 3rem;
+    }
+    
+    .grille-cartes {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .carte-categorie {
+        padding: 2rem;
+    }
+    
+    .icone-categorie {
+        font-size: 3rem;
+    }
+    
+    .carte-categorie h3 {
+        font-size: 1.7rem;
+    }
+    
+    .carte-categorie p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .entete-page h1 {
+        font-size: 1.6rem;
+    }
+    
+    .texte-introduction {
+        font-size: 1rem;
+    }
+    
+    .conteneur-categories > h2 {
+        font-size: 1.7rem;
+    }
+    
+    .carte-categorie {
+        padding: 1.5rem;
+    }
+    
+    .carte-categorie h3 {
+        font-size: 1.5rem;
+    }
+    
+    .carte-categorie p {
+        font-size: 0.95rem;
+    }
+    
+    
+}

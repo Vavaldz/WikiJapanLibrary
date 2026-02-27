@@ -1,0 +1,190 @@
+/* style pour la page actualités */
+
+
+main {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    background-color: #f0e8df;
+    
+}
+
+/* Permet de modfier l'entete de la page */
+.article-header {
+    text-align: center;
+    margin-bottom: 5rem;
+    padding: 3rem 2rem;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(184, 59, 94, 0.2);
+    border-left: 8px solid #b83b5e;
+    border-right: 8px solid #b83b5e;
+}
+/* permet de modifier le titre de l'article */
+.article-header h1 {
+    font-size: 3.5rem;
+    color: #b83b5e;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+/* permet de modifier le sous titre */
+.article_sous_titre {
+    font-size: 1.4rem;
+    color: #6d4c41;
+    font-style: italic;
+    font-weight: 500;
+}
+
+/* zone article */
+/* permet de modifier la forme des carte des articles  */
+.zone_article {
+    background: #ffffff;
+    border-radius: 25px;
+    margin-bottom: 4rem;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(109, 76, 65, 0.15);
+    display: flex;
+    transition: all 0.4s ease;
+    border: 4px solid #e8d5c4;
+}
+/* permet de modifier l'effet quand on passe le curseur sur la zone de l'article */
+.zone_article:hover {
+    transform: scale(1.02);
+    box-shadow: 0 15px 45px rgba(184, 59, 94, 0.3);
+    border-color: #b83b5e;
+}
+
+/* Image article */
+.article-image {
+    flex: 1;
+    min-height: 400px;
+    overflow: hidden;
+}
+
+.article-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+/* permet de faire un petit effet de zoom de l'image quand on passe sur le cadre  */
+.zone_article:hover .article-image img {
+    transform: scale(1.05);
+}
+
+/* Zone Texte article */
+.zone_texte_article {
+    flex: 1;
+    padding: 3.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.zone_texte_article h2 {
+    font-size: 2.2rem;
+    color: #b83b5e;
+    margin-bottom: 2rem;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 1rem;
+}
+/* permet de modifier la petite bar de séparation en dessous du tire  */
+.zone_texte_article h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #b83b5e 0%, #e8d5c4 100%);
+}
+
+.zone_texte_article p {
+    font-size: 1.15rem;
+    color: #4a3832;
+    line-height: 1.9;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+.zone_texte_article p:last-child {
+    margin-bottom: 0;
+}
+
+/* Article inversé */
+.zone_article.reverse {
+    flex-direction: row-reverse;
+}
+
+/* Responsive */
+/* Version ordinateur */
+@media (max-width: 1024px) {
+    .zone_article,
+    .zone_article.reverse {
+        flex-direction: column;
+    }
+    
+    .article-image {
+        min-height: 350px;
+    }
+    
+    .zone_texte_article {
+        padding: 2.5rem;
+    }
+    
+    .article-header h1 {
+        font-size: 2.5rem;
+    }
+}
+/* Version tablette */
+@media (max-width: 768px) {
+    main{
+        padding: 2rem 1rem;
+    }
+    
+    .article-header {
+        padding: 2rem 1.5rem;
+        margin-bottom: 3rem;
+    }
+    
+    .article-header h1 {
+        font-size: 2rem;
+    }
+    
+    .article_sous_titre {
+        font-size: 1.1rem;
+    }
+    
+    .article-image {
+        min-height: 280px;
+    }
+    
+    .zone_texte_article {
+        padding: 2rem;
+    }
+    
+    .zone_texte_article h2 {
+        font-size: 1.7rem;
+    }
+    
+    .zone_texte_article p {
+        font-size: 1rem;
+    }
+}
+/* Version telephone */
+@media (max-width: 480px) {
+    .article-header h1 {
+        font-size: 1.6rem;
+    }
+    
+    .zone_texte_article h2 {
+        font-size: 1.4rem;
+    }
+    
+    .zone_texte_article p {
+        font-size: 0.95rem;
+    }
+}

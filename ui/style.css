@@ -1,0 +1,316 @@
+/* css commun à toutes les pages */
+
+/* importation de la polices que je vais utiliser pour les titres */
+@font-face {
+  font-family: "ButlerStencil";
+  src: url("font/Butler_Stencil_Webfont/ButlerStencil-Medium.woff2");
+}
+
+h2,
+h1,
+h3 {
+  font-family: "ButlerStencil";
+}
+
+/* version ordinateur */
+@media (1025px <= width <= 9999px) {
+  /* permet de faire disparaitre le menu hamburger quand je suis en version ordinateur */
+  .menu-hamburger {
+    display: none;
+  }
+
+  /* permet de définir la structure tu header  */
+  .zone-menu {
+    display: grid;
+    grid-template-columns: 1fr 8fr;
+  }
+  /* partie entete et navigation bar */
+  #logo_site {
+    width: 150px;
+    height: auto;
+  }
+  /* structure des elements  du nav  */
+  .menu {
+    padding-top: 1%;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    font-size: 150%;
+  }
+
+  .menu .multiple ul {
+    max-height: 0;
+    overflow: hidden;
+    transition: 0;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    width: 323px;
+    position: absolute;
+  }
+
+  .menu .multiple:hover ul {
+    max-height: 50em;
+    transition: 1s;
+  }
+
+  .menu h3,
+  .menu a {
+    display: block;
+    margin: 0;
+    padding: 0.5em 1.5em;
+    font-size: inherit;
+    color: #7f7a7a;
+    text-decoration: none;
+    box-sizing: border-box;
+  }
+  /* permet d'avoir une slash rouge en dessous du menu quand on pace dessus  */
+  .menu .multiple a:hover,
+  .menu .simple a:hover {
+    color: black;
+    background-image: url("../ui/images/slash.png");
+    background-repeat: no-repeat;
+    background-size: 35%;
+    background-position-x: center;
+    background-position-y: bottom;
+  }
+
+  .multiple {
+    padding-top: 4%;
+  }
+
+  /* partie principale */
+  body {
+    background-color: #f2ede7;
+    max-width: 1920px;
+
+    margin: 0;
+    padding: 0;
+  }
+
+  main {
+    background-color: #f2ede7;
+    color: black;
+  }
+
+  /* partie footer et  crédit */
+  footer {
+    height: 50px;
+    background-color: #323130;
+    text-align: center;
+    padding-top: 2px;
+  }
+
+  footer a {
+    text-decoration: none;
+    color: white;
+  }
+}
+
+/* Version Tablette */
+@media (769px <= width < 1025px) {
+  /* permet de ne pas affichier le nav quand on est en version tablette et plutot un icone menu hamburger */
+  .zone-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    position: relative;
+  }
+
+  #logo_site {
+    height: 60px;
+  }
+
+  .menu {
+    display: none;
+    position: absolute;
+    top: 70%;
+    right: 0;
+    background-color: #e6dbce;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem 0;
+    z-index: 1000;
+    min-width: 250px;
+    flex-direction: column;
+    text-align: left;
+  }
+  /* permet d'afficher le menu a la verticale quand on passe sur le menu hamburger  */
+  .menu-hamburger:hover + .menu,
+  .zone-menu .menu:hover {
+    display: flex;
+  }
+
+  .menu .multiple ul {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s;
+    margin: 0;
+    list-style: none;
+    width: 100%;
+  }
+
+  .menu .multiple:hover ul {
+    max-height: 50em;
+  }
+
+  .multiple ul li {
+    margin-right: 80px;
+  }
+
+  .menu h3,
+  .menu a {
+    display: block;
+    margin: 0;
+    padding: 0.5em 1.5em;
+    font-size: 1.5rem;
+    color: #7f7a7a;
+    text-decoration: none;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  .menu .multiple a:hover,
+  .menu .simple a:hover {
+    color: black;
+    background-image: url("../ui/images/slash.png");
+    background-repeat: no-repeat;
+    background-size: 25%;
+    background-position: center bottom;
+  }
+
+  .multiple {
+    padding-top: 0;
+  }
+
+  /* partie principale */
+  body {
+    background-color: #f2ede7;
+    max-width: 1024px;
+
+    margin: 0;
+    padding: 0;
+  }
+
+  main {
+    background-color: #f2ede7;
+    color: black;
+  }
+
+  /* partie crédit */
+  footer {
+    height: 50px;
+    background-color: #323130;
+    text-align: center;
+    padding-top: 2px;
+  }
+
+  footer a {
+    text-decoration: none;
+    color: white;
+  }
+}
+
+/* version mobile  */
+@media (0px <= width < 769px) {
+  .zone-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    position: relative;
+  }
+
+  #logo_site {
+    height: 60px;
+  }
+
+  .menu {
+    display: none;
+    position: absolute;
+    top: 70%;
+    right: 0;
+    background-color: #e6dbce;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem 0;
+    z-index: 1000;
+    min-width: 250px;
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .menu-hamburger:hover + .menu,
+  .zone-menu .menu:hover {
+    display: flex;
+  }
+
+  .menu .multiple ul {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s;
+    margin: 0;
+    list-style: none;
+    width: 100%;
+  }
+
+  .menu .multiple:hover ul {
+    max-height: 50em;
+  }
+
+  .multiple ul li {
+    margin-right: 80px;
+  }
+
+  .menu h3,
+  .menu a {
+    display: block;
+    margin: 0;
+    padding: 0.5em 1.5em;
+    font-size: 1.5rem;
+    color: #7f7a7a;
+    text-decoration: none;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  .menu .multiple a:hover,
+  .menu .simple a:hover {
+    color: black;
+    background-image: url("../ui/images/slash.png");
+    background-repeat: no-repeat;
+    background-size: 25%;
+    background-position: center bottom;
+  }
+
+  .multiple {
+    padding-top: 0;
+  }
+
+  /* partie principale */
+
+  body {
+    background-color: #f2ede7;
+    max-width: 1800px;
+
+    margin: 0;
+    padding: 0;
+  }
+
+  main {
+    background-color: #f2ede7;
+    color: black;
+  }
+
+  /* pied de page ou on retrouve les crédits */
+  footer {
+    height: 50px;
+    background-color: #323130;
+    text-align: center;
+    padding-top: 2px;
+  }
+
+  footer a {
+    text-decoration: none;
+    color: white;
+  }
+}

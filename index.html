@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="lemarch252" />
+    <title>wikiJapanLibrary</title>
+    <link rel="stylesheet" href="ui/style.css" />
+    <link rel="stylesheet" href="ui/accueil.css" />
+  </head>
+  <body>
+    <!-- header de la page avec toute la partie navigation et menu  -->
+    <header class="zone-menu">
+      <img
+        id="logo_site"
+        src="ui/images/WikiJapanLibrary.png"
+        alt="logo site"
+      />
+
+      <div class="menu-hamburger">
+        <img src="ui/images/icon_menu.png" alt="image menu hamburger" />
+      </div>
+
+      <nav class="menu">
+        <section class="simple">
+          <h3><a href="accueil.html">Home</a></h3>
+        </section>
+
+        <section class="simple">
+          <h3><a href="ui/page/actualites.html">Actualité</a></h3>
+        </section>
+
+        <section class="multiple">
+          <h3>Bibliotheque</h3>
+          <ul>
+            <li><a href="ui/page/bib_maj.html">Incontournables</a></li>
+            <li><a href="ui/page/bib_type.html">Catégorie</a></li>
+          </ul>
+        </section>
+
+        <section class="simple">
+          <h3><a href="ui/page/article.html">Article</a></h3>
+        </section>
+      </nav>
+    </header>
+    <!-- partie principale de la page d'accueil -->
+    <main>
+      <!-- premiere carte avec redirection vers la page en question  -->
+      <a class="block_article" href="ui/page/article.html">
+        <section class="article_recent">
+          <img id="torii_img" src="ui/images/torii.jpg" alt="photo article" />
+          <h3>
+            <strong class="type">[Article à la une] </strong> Les bibliothèques
+            japonaises : un voyage à travers l’histoire et le savoir...
+          </h3>
+        </section>
+      </a>
+      <!-- deuxieme carte avec redirection vers la page en question -->
+      <a class="block_actu" href="ui/page/actualites.html">
+        <section class="actualite_recente">
+          <img
+            id="under"
+            src="ui/images/underground_library.jpg"
+            alt="photo article"
+          />
+          <h3>
+            <strong class="type">[Actualité Récente]</strong> Une bibliothèque
+            souterraine appelée "Library in the Earth" a ouvert c'est porte à
+            Kisarazu au Japon. Elle est...
+          </h3>
+        </section>
+      </a>
+    </main>
+    <!-- partie footer de la page avec lien vers la page crédit  -->
+    <footer>
+      <p>
+        <a href="ui/page/credit.html"
+          ><strong>
+            図書館
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;WikiJapanLibrary&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
+            Crédit &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;図書館</strong
+          >
+        </a>
+      </p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,256 @@
+/* Partie conteneur principal*/
+main {
+    background-color: #f0e8df;
+    min-height: calc(100vh - 200px);
+    padding: 4rem 0;
+}
+
+/* Partie en-tête de page */
+.entete-page {
+    max-width: 1300px;
+    margin: 0 auto 5rem;
+    padding: 3rem 2rem;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(184, 59, 94, 0.2);
+    border-left: 8px solid #b83b5e;
+    border-right: 8px solid #b83b5e;
+    text-align: center;
+}
+
+.entete-page h1 {
+    font-size: 3.5rem;
+    color: #b83b5e;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.sous-titre {
+    font-size: 1.3rem;
+    color: #6d4c41;
+    line-height: 1.8;
+    max-width: 900px;
+    margin: 0 auto;
+    font-style: italic;
+}
+
+/*  Partie conteneur  bibliothèques */
+.conteneur-bibliotheques {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.liste-cartes {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+/*  Partie carte bibliothèque*/
+.carte-bibliotheque {
+    background: #ffffff;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(109, 76, 65, 0.15);
+    display: flex;
+    transition: all 0.4s ease;
+    border: 4px solid #e8d5c4;
+}
+
+.carte-bibliotheque:hover {
+    transform: scale(1.02);
+    box-shadow: 0 15px 45px rgba(184, 59, 94, 0.3);
+    border-color: #b83b5e;
+}
+
+/* Alternance image gauche/droite */
+.carte-bibliotheque:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+/* Partie image */
+.partie-image {
+    flex: 1;
+    min-height: 450px;
+    overflow: hidden;
+    position: relative;
+}
+
+.partie-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.carte-bibliotheque:hover .partie-image img {
+    transform: scale(1.05);
+}
+
+
+
+/* Partie texte */
+.partie-texte {
+    flex: 1;
+    padding: 3.5rem;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(135deg, #fefaf6 0%, #fff5eb 100%);
+}
+
+.badge-categorie {
+    display: inline-block;
+    background: #b83b5e;
+    color: #fff;
+    padding: 0.5rem 1.5rem;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    align-self: flex-start;
+    letter-spacing: 1px;
+}
+
+.partie-texte h3 {
+    font-size: 2.3rem;
+    color: #b83b5e;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.partie-texte h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, #b83b5e 0%, #e8d5c4 100%);
+}
+
+.sous-titre-bibliotheque {
+    font-size: 1.3rem;
+    color: #6d4c41;
+    font-style: italic;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}
+
+.partie-texte p:not(.sous-titre-bibliotheque) {
+    font-size: 1.08rem;
+    color: #4a3832;
+    line-height: 1.9;
+    text-align: justify;
+    margin-bottom: 2rem;
+    flex-grow: 1;
+}
+
+/* Partie responsive*/
+@media (max-width: 1024px) {
+    .entete-page h1 {
+        font-size: 2.8rem;
+    }
+    
+    .carte-bibliotheque,
+    .carte-bibliotheque:nth-child(even) {
+        flex-direction: column;
+    }
+    
+    .partie-image {
+        min-height: 350px;
+    }
+    
+    .partie-texte {
+        padding: 2.5rem;
+    }
+    
+    .partie-texte h3 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    main {
+        padding: 2rem 0;
+    }
+    
+    .entete-page {
+        margin-bottom: 3rem;
+        padding: 2rem 1.5rem;
+    }
+    
+    .entete-page h1 {
+        font-size: 2rem;
+    }
+    
+    .sous-titre {
+        font-size: 1.1rem;
+    }
+    
+    .conteneur-bibliotheques {
+        padding: 0 1rem;
+    }
+    
+    .liste-cartes {
+        gap: 2.5rem;
+    }
+    
+    .partie-image {
+        min-height: 280px;
+    }
+    
+    .partie-texte {
+        padding: 2rem;
+    }
+    
+    .badge-categorie {
+        font-size: 0.85rem;
+        padding: 0.4rem 1.2rem;
+    }
+    
+    .partie-texte h3 {
+        font-size: 1.7rem;
+    }
+    
+    .sous-titre-bibliotheque {
+        font-size: 1.1rem;
+    }
+    
+    .partie-texte p:not(.sous-titre-bibliotheque) {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .entete-page h1 {
+        font-size: 1.6rem;
+    }
+    
+    .sous-titre {
+        font-size: 1rem;
+    }
+    
+    .liste-cartes {
+        gap: 2rem;
+    }
+    
+    .partie-texte {
+        padding: 1.5rem;
+    }
+    
+    .partie-texte h3 {
+        font-size: 1.5rem;
+    }
+    
+    .sous-titre-bibliotheque {
+        font-size: 1rem;
+    }
+    
+    .partie-texte p:not(.sous-titre-bibliotheque) {
+        font-size: 0.95rem;
+    }
+}
